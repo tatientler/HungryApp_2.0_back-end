@@ -30,13 +30,13 @@ routes(app)
 
 //Localhost Connection
 app.listen(PORT, () => {
-    console.log(chalk.bgCyan(`    
-    Servidor local rodando na porta ${PORT}`))
+    console.log(`    
+    Servidor local rodando na porta ${PORT}`)
 })
 
 //MongoDB Atlas Connection
 db.on('error', console.log.bind(console, 'Erro de conexão'))
 db.once('open', () => {
-    console.log(chalk.bgCyan(`    MondoDB Atlas conectado
-    `))
+    console.log(`    MondoDB Atlas conectado
+    `)
 })
