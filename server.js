@@ -9,6 +9,12 @@ import mealRoutes from './src/routes/mealRoutes.js'
 const PORT = process.env.PORT || 3000
 const app = express()
 
+//Localhost Connection
+app.listen(PORT, () => {
+    console.log(`    
+    Servidor local rodando na porta ${PORT}`)
+})
+
 //Routes
 const routes = (app) => {
     app.route('/').get((req, res) => {
@@ -27,11 +33,6 @@ const routes = (app) => {
 routes(app)
 
 
-//Localhost Connection
-app.listen(PORT, () => {
-    console.log(`    
-    Servidor local rodando na porta ${PORT}`)
-})
 
 //MongoDB Atlas Connection
 db.on('error', console.log.bind(console, 'Erro de conexão'))
