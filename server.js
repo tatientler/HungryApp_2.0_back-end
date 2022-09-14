@@ -1,7 +1,6 @@
 import express from 'express'
 import cors from 'cors'
 import db from './src/config/dbConnect.js'
-import chalk from 'chalk'
 
 import userRoutes from './src/routes/userRoutes.js'
 import restaurantRoutes from './src/routes/restaurantRoutes.js'
