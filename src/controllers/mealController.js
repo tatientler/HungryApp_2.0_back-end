@@ -27,12 +27,12 @@ class MealController {
     }
 
     static createMeal = (req, res) => {
-        const restaurant = new meals(req.body)
-        restaurant.save((error) => {
+        const meal = new meals(req.body)
+        meal.save((error) => {
             if (error) {
                 res.status(500).send({ message: `${error.message}` })
             } else {
-                res.status(201).send(restaurant.toJSON())
+                res.status(201).send(meal.toJSON())
             }
         })
     }
